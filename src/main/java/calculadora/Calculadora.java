@@ -70,7 +70,7 @@ public class Calculadora {
         if (b == 0) {
             throw new ArithmeticException("Divisão por zero");
         }
-        return a / b;
+        return b / a;
     }
     
 }
