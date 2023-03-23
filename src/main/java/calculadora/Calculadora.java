@@ -51,27 +51,22 @@ public class Calculadora {
     }
     
     public int dividir(int a, int b) {
-        if (b == 0) {
-            throw new ArithmeticException("Divisão por zero");
-        }
-        return a / b;
+        return dividirAux((double) a, (double) b).intValue();
     }
     
     public double dividir(double a, double b) {
-        if (b == 0) {
-            throw new ArithmeticException("Divisão por zero");
-        }
-        return a / b;
+        return dividirAux((double) a, (double) b).doubleValue();
     }
     
     public float dividir(float a, float b) {
-        if (b == 0) {
-            throw new ArithmeticException("Divisão por zero");
-        }
-        return a / b;
+        return dividirAux((double) a, (double) b).floatValue();
     }
     
     public long dividir(long a, long b) {
+        return dividirAux((double) a, (double) b).longValue();
+    }
+    
+    private Double dividirAux(double a, double b) {
         if (b == 0) {
             throw new ArithmeticException("Divisão por zero");
         }
